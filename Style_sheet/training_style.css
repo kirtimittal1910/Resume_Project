@@ -1,0 +1,258 @@
+.training-heading{
+    display: flex;
+    flex-direction: row;
+  /*  padding-left: 15vw;
+    padding-right: 15vw;*/
+    padding-top: 0.5vw; 
+    padding-bottom: 2.5vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.cd-container {
+    position:relative;
+    width: 85%;
+    margin: 0 auto;
+    
+}
+
+.cd-container::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background-color:rgb(30,30,30);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+  
+.cd-timeline-block {
+    padding: 5px;
+    width: 45%;
+    min-height: 150px;
+    position: relative;
+    left: 5%;
+    background:none;
+}
+
+
+
+
+.cd-timeline-block::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+  
+.cd-timeline-content{
+    padding: 18px;   
+}
+
+.cd-timeline-block::before {
+    left: 60px; 
+    border: medium solid light;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.cd-timeline-logo {
+    position:relative;
+    width: 60px;
+    overflow: hidden;
+}
+
+.Course-Name {
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
+    word-wrap: break-word;
+}
+
+.Company-name {
+    color: sandybrown;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Time-duration{
+    color: inherit;
+    font-weight: 550;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Description{
+    line-height:13pt;
+}
+
+.description{
+    font-size: 14px;
+    padding: 5px;
+    color: inherit;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left{
+    left: 0;
+}
+
+/*.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}*/
+.left::after{
+    right: -62px;
+    top: 5px;
+}  
+
+.right{
+    left: 50%;
+}
+.left{
+    right: 50%;
+}
+
+@media screen and (max-width: 600px){
+    .left::after{
+        left:12px;
+    }
+}
+
+/*.right::before {
+    content: " ";
+    height: 0;
+    position: relative;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent transparent transparent, white;
+}*/
+
+.right::after {
+    left: -17px;
+    top: 33px;
+}
+  
+.cd-timeline-content a:link {
+    color: black;
+}
+.cd-timeline-content a {
+    color: sandybrown;
+}
+.text-align-justify{
+    text-align: justify;
+}
+
+.content-shift-right{
+    position: relative;
+    left: 13%;
+    animation-name: fillRight;
+    animation-duration: 2s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: 1;
+    transform: translateX(5%);
+    
+}
+@keyframes fillRight{
+    0%{
+        left: -5%;
+        opacity: 0.5;
+    }
+
+    100%{
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+.content-shift-left{
+    position: relative;
+    right: 13%;
+    animation-name: fillLeft ;
+    animation-duration: 2s   ;
+    animation-timing-function: ease-out  ;
+    animation-iteration-count: 1px;
+    transform: translateX(5%);
+    transform: translateZ(0);
+}
+
+@keyframes fillLeft{
+    0%{
+        right: -10% ;
+        opacity: 0.5;
+    }
+
+    100%{
+        right: 3%;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+      .cd-container::after {
+        left: 31px;
+      }
+    
+    /* Full-width containers */
+      .cd-timeline-block {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+    
+    /* Make sure that all arrows are pointing leftwards */
+      .cd-timeline-block::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    
+    /* Make sure all circles are at the same spot */
+    .right::after {
+        left: 15px;
+    }
+
+    .left::after{
+        right: -49px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+    

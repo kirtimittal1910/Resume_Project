@@ -1,0 +1,83 @@
+#portfolio{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading{
+    align-self: center;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+}
+.projects{
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: center;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-box{
+    height: 177px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 177px;
+    max-width: 200px;
+    border: 4px solid #0A2335;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 1em;
+}
+
+.tune_player{
+    background-image: url("../images/Cpp_Tuning_Project.jpg");
+    background-size: contain;
+    border-radius: 1em;
+    background-repeat: no-repeat;
+}
+
+
+.resume{
+    background-image: url("../images/HTML5_CSS3.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+    /* border-color: black;
+    border: 5em; */
+}
+
+.project-details{
+    transition: all 0.5s ease-in-out;
+    font-size: larger;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.project-box:hover{
+ 
+    box-shadow:  0 0 25px lightslategrey;
+    
+}
+
+.project-box:hover .project-details{
+    background-color:rosybrown;
+    opacity: 0.8;
+    color: black;
+    font-weight: bold;
+    height: 65%;
+    padding-top: 30%;
+    margin-top: 0;
+}
+.projects a:link{
+    color: black;
+    text-decoration: none;
+
+}
