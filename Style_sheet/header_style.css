@@ -15,6 +15,32 @@
 
     /*overflow: scroll;*/ 
 }
+@media screen and (max-width: 900px){
+    #navi div a{
+        padding:3px 2px  !important;
+        display: block;
+        color:white;
+        text-decoration: none;
+        text-align: center;
+        float: left;
+        margin: 5px !important;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.3rem;
+    }
+    nav{
+        height: 75px !important;
+    }
+    #navi div a:hover{
+        color:white !important;
+        text-decoration: underline !important;
+        /* text-shadow: rgba(230,196,196,0.3); */
+        background: rgba(0, 0, 0, 0.7) !important;
+        border-radius: 8px !important;
+    }
+    
+}
 
 
 /*Upper Navigation*/
